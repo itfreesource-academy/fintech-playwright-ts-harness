@@ -1,0 +1,57 @@
+name: Playwright E2E Quality Gate & Test CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  playwright-test:
+    name: Playwright TypeScript E2E Quality Gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout Test Repository
+        uses: actions/checkout@v4
+
+      - name: Checkout Portal WebApp
+        uses: actions/checkout@v4
+        with:
+          repository: 'vishalprajapati2k25/fintech-payment-portal'
+          path: 'fintech-payment-portal'
+
+      - name: Set up Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Node Dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers & OS Dependencies
+        run: npx playwright install --with-deps chromium firefox
+
+      - name: Execute Playwright E2E Test Suites
+        env:
+          BASE_URL: "file://${{ github.workspace }}/fintech-payment-portal/index.html"
+          CI: "true"
+        run: npx playwright test --project=chromium
+
+      - name: Archive Playwright HTML Test Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-html-report
+          path: playwright-report/
+          retention-days: 14
+
+      - name: Archive Test Results & Traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results
+          path: test-results/
+          retention-days: 14

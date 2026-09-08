@@ -1,0 +1,21 @@
+{
+  "name": "fintech-playwright-ts-harness",
+  "version": "1.0.0",
+  "description": "Enterprise Playwright & TypeScript UI/API Test Automation Platform for Distributed FinTech Portals",
+  "author": "Vishal Prajapati <280052283+vishalprajapati2k25@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}
