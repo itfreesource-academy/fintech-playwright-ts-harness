@@ -1,0 +1,48 @@
+version: '3.8'
+
+networks:
+  fintech-frontend-net:
+    driver: bridge
+
+services:
+  # 1. Target Application Under Test (Local Isolated Web Server)
+  web-portal:
+    image: nginx:alpine
+    container_name: fintech-portal-local
+    networks:
+      - fintech-frontend-net
+    ports:
+      - "3000:80"
+    volumes:
+      - ../../fintech-payment-portal:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
+  # 2. Containerized Playwright E2E Test Runner
+  playwright-runner:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    container_name: fintech-playwright-runner
+    networks:
+      - fintech-frontend-net
+    environment:
+      BASE_URL: "http://web-portal:80/index.html"
+      CI: "true"
+    volumes:
+      - ../playwright-report:/app/playwright-report
+      - ../test-results:/app/test-results
+    depends_on:
+      - web-portal
+
+  # 3. Interactive HTML Test Report Dashboard Server
+  report-server:
+    image: nginx:alpine
+    container_name: fintech-report-server
+    networks:
+      - fintech-frontend-net
+    ports:
+      - "9323:80"
+    volumes:
+      - ../playwright-report:/usr/share/nginx/html:ro
+    depends_on:
+      - playwright-runner
