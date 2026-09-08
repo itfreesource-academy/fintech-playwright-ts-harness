@@ -1,6 +1,6 @@
 # FinTech Playwright & TypeScript E2E Test Platform
 
-[![Playwright E2E Quality Gate & Test CI](https://github.com/vishalprajapati2k25/fintech-playwright-ts-harness/actions/workflows/ci.yml/badge.svg)](https://github.com/vishalprajapati2k25/fintech-playwright-ts-harness/actions)
+[![Playwright E2E Quality Gate & Test CI](https://github.com/itfreesource-academy/fintech-playwright-ts-harness/actions/workflows/ci.yml/badge.svg)](https://github.com/itfreesource-academy/fintech-playwright-ts-harness/actions)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?logo=typescript)
 ![Playwright](https://img.shields.io/badge/Playwright-1.43-green?logo=playwright)
 ![Node.js](https://img.shields.io/badge/Node.js-20%20LTS-darkgreen?logo=nodedotjs)
@@ -110,7 +110,7 @@ fintech-playwright-ts-harness/
 ### 2. Installation
 ```bash
 # Clone the repository
-git clone https://github.com/vishalprajapati2k25/fintech-playwright-ts-harness.git
+git clone https://github.com/itfreesource-academy/fintech-playwright-ts-harness.git
 cd fintech-playwright-ts-harness
 
 # Install dependencies
@@ -151,8 +151,8 @@ npm run report
 ---
 
 ## 🔗 Related FinTech Showcase Ecosystem
-* **[fintech-payment-portal](https://github.com/vishalprajapati2k25/fintech-payment-portal):** The live FinTech web application with client-side OAuth, idempotency engine, and Kafka inspector (deployed to Cloudflare Pages).
-* **[fintech-test-platform-harness](https://github.com/vishalprajapati2k25/fintech-test-platform-harness):** Enterprise Java 17, REST Assured, WireMock, and Apache Kafka (with Awaitility) test platform.
+* **[fintech-payment-portal](https://github.com/itfreesource-academy/fintech-payment-portal):** The live FinTech web application with client-side OAuth, idempotency engine, and Kafka inspector (deployed to Cloudflare Pages).
+* **[fintech-test-platform-harness](https://github.com/itfreesource-academy/fintech-test-platform-harness):** Enterprise Java 17, REST Assured, WireMock, and Apache Kafka (with Awaitility) test platform.
 
 ---
 

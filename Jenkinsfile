@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo "=== Checking out FinTech Portal WebApp ==="
                 dir('fintech-payment-portal') {
-                    git url: 'https://github.com/vishalprajapati2k25/fintech-payment-portal.git', branch: 'main'
+                    git url: 'https://github.com/itfreesource-academy/fintech-payment-portal.git', branch: 'main'
                 }
             }
         }

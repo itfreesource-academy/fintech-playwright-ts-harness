@@ -19,7 +19,7 @@ jobs:
       - name: Checkout Portal WebApp
         uses: actions/checkout@v4
         with:
-          repository: 'vishalprajapati2k25/fintech-payment-portal'
+          repository: 'itfreesource-academy/fintech-payment-portal'
           path: 'fintech-payment-portal'
 
       - name: Set up Node.js LTS
