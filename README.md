@@ -3,14 +3,12 @@
 [![Playwright E2E Quality Gate & Test CI](https://github.com/itfreesource-academy/fintech-playwright-ts-harness/actions/workflows/ci.yml/badge.svg)](https://github.com/itfreesource-academy/fintech-playwright-ts-harness/actions)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?logo=typescript)
 ![Playwright](https://img.shields.io/badge/Playwright-1.43-green?logo=playwright)
-![Cypress](https://img.shields.io/badge/Cypress-Component%20%26%20E2E-17202C?logo=cypress)
-![Appium](https://img.shields.io/badge/Appium-Mobile%20Automation-662d91?logo=appium)
 ![BrowserStack](https://img.shields.io/badge/BrowserStack-Cloud%20Grid-orange?logo=browserstack)
 ![WebSockets](https://img.shields.io/badge/WebSockets-Real--Time%20Stream-teal)
-![ReportPortal & Grafana](https://img.shields.io/badge/Observability-ReportPortal%20%7C%20Grafana-ff6600)
-![Jira Xray & QMetry](https://img.shields.io/badge/Traceability-Xray%20%7C%20QMetry-0052cc)
+![Grafana](https://img.shields.io/badge/Observability-Grafana%20%7C%20Allure-ff6600)
+![Jira Xray](https://img.shields.io/badge/Traceability-Jira%20Xray-0052cc)
 
-An enterprise-grade **Playwright + TypeScript** (with complementary **Cypress** web & **Appium** mobile testbed architectures) end-to-end test automation platform engineered to validate mission-critical financial user journeys, strict transactional idempotency, real-time **WebSocket** payment feeds, asynchronous Kafka stream rendering, and OAuth 2.0 authentication flows with **BrowserStack** cross-browser cloud distribution and **ReportPortal / Grafana / Jira Xray & QMetry** observability.
+An enterprise-grade **Playwright + TypeScript** end-to-end test automation platform engineered to validate mission-critical financial user journeys, strict transactional idempotency, real-time **WebSocket** payment feeds, asynchronous Kafka stream rendering, and OAuth 2.0 authentication flows with **BrowserStack** cross-browser cloud distribution, **Allure & Grafana** observability, and **Jira Xray** enterprise traceability.
 
 Engineered by **[Vishal Prajapati](https://defendloop.io)** (*Senior Automation & Tools Development Engineer*) to showcase production-grade UI automation architecture tailored to modern FinTech distributed scale (aligning with Moniepoint's Quality Engineering standards).
 
@@ -79,14 +77,13 @@ flowchart TD
 * Validates bi-directional WebSocket channels streaming instant transaction state updates (`PENDING` → `AUTHORIZED` → `SETTLED`) to client terminals with sub-50ms latency assertions.
 * Asserts connection resilience, heartbeat ping/pong handling, and automated client reconnection with zero message loss during simulated network drops.
 
-### 6. Cross-Platform Cloud Grid & Mobile Testing (BrowserStack & Appium)
-* **BrowserStack Automate:** Configured for distributed parallel test execution across real desktop browsers (Chrome, Safari on macOS, Edge, Firefox) and mobile emulators.
-* **Mobile Testbed (Appium & Cypress):** Complemented with Appium test scripts for native Android/iOS mobile payment flows and Cypress component tests for frontend checkout widgets.
+### 6. Cross-Browser Cloud Grid (BrowserStack Automate)
+* **BrowserStack Automate:** Configured for distributed parallel test execution across real desktop browsers (Chrome, Safari on macOS, Edge, Firefox) with cloud artifacts, video capture, and network inspection.
 
-### 7. Observability, Analytics & Enterprise Traceability (ReportPortal, Grafana, Xray & QMetry)
-* **ReportPortal Integration:** Publishes test run telemetry into ReportPortal with AI-assisted classification of test failures and defect triage.
+### 7. Observability, Metrics & Enterprise Traceability (Allure, Grafana & Jira Xray)
+* **Allure Test Reports:** Generates rich visual test reports with embedded network traces, failure screenshots, and execution steps.
 * **Grafana Dashboards:** Emits test execution metrics (pass rates, execution latency, retry counts) to Prometheus/Grafana quality observability dashboards.
-* **Jira Xray & QMetry Mapping:** Test cases are tagged with test keys (e.g., `@TEST_FIN_101`) for bi-directional traceability with Jira Xray and QMetry Test Management.
+* **Jira Xray Mapping:** Test cases are tagged with test keys (e.g., `@TEST_FIN_101`) for bi-directional traceability with Jira Xray test management.
 
 ---
 
