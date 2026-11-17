@@ -10,7 +10,7 @@
 
 An enterprise-grade **Playwright + TypeScript** end-to-end test automation platform engineered to validate mission-critical financial user journeys, strict transactional idempotency, real-time **WebSocket** payment feeds, asynchronous Kafka stream rendering, and OAuth 2.0 authentication flows with **BrowserStack** cross-browser cloud distribution, **Allure & Grafana** observability, and **Jira Xray** enterprise traceability.
 
-Engineered by **[Vishal Prajapati](https://defendloop.io)** (*Senior Automation & Tools Development Engineer*) to showcase production-grade UI automation architecture tailored to modern FinTech distributed scale (aligning with Moniepoint's Quality Engineering standards).
+Engineered by **[Vishal Prajapati](https://defendloop.io)** (*Senior Software Engineer | Java • Spring Boot • Microservices • Distributed Systems*) to showcase production-grade UI automation architecture tailored to modern FinTech distributed scale (aligning with Moniepoint's Quality Engineering standards).
 
 ---
 
@@ -171,7 +171,7 @@ npm run report
 ---
 
 ## 👤 Author
-* **Vishal Prajapati** — *Senior Associate: Test Automation & Tools Development Engineer*
+* **Vishal Prajapati** — *Senior Software Engineer | Java • Spring Boot • Microservices • Distributed Systems*
 * **Portfolio:** [defendloop.io](https://defendloop.io)
 * **LinkedIn:** [linkedin.com/in/vishalprajapati2k25](https://www.linkedin.com/in/vishalprajapati2k25)
 * **Education & Community:** Founder of [ITFreeSource Academy](https://academy.itfreesource.com)
